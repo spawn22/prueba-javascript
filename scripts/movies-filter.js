@@ -26,7 +26,30 @@
   La función luego busca cualquier usuario correspondiente para estos registros coincidentes utilizando sus IDs respectivos desde cada registro combinado. También construye una propiedad de dirección completa concatenando los valores de calle y ciudad desde la información de dirección proporcionada en la lista de usuarios.
   A continuación, crea un objeto que contiene varios detalles tanto sobre el usuario que vio la película como sobre la película misma: id, nombre del usuario, correo electrónico, dirección completa,nombre de compañía,título,rating e imagen URL para esa película. Este objeto se agrega al array filteredMovies.
   Finalmente, una vez que se han procesado todas las películas, la función devuelve un array con los objetos filtrados según los criterios especificados.
-    */
+  
+ * Filtra películas en función de los criterios proporcionados y devuelve las películas filtradas.
+ *
+ * @param {Object} opciones - Un objeto que contiene los siguientes parámetros:
+ *   - {Array} usuarios: Un array de objetos de usuario que contiene información del usuario.
+ *   - {Array} películas: Un array de objetos de película que contiene información de la película.
+ *   - {string} userId: ID de usuario utilizado para filtrar películas.
+ *   - {string} fromDate: Filtra las películas a partir de esta fecha (inclusive).
+ *   - {string} toDate: Filtra las películas hasta esta fecha (inclusive).
+ *   - {number} rate: Filtra las películas con una calificación mínima.
+ *
+ * @return {Array} Un array de objetos de película que contiene la siguiente información:
+ *   - {number} id: ID de usuario del usuario que vio la película.
+ *   - {string} username: Nombre de usuario del usuario que vio la película.
+ *   - {string} email: Correo electrónico del usuario que vio la película.
+ *   - {string} fullAddress: Dirección completa del usuario que vio la película.
+ *   - {string} company: Nombre de la empresa para la que trabaja el usuario que vio la película.
+ *   - {string} movie: Título de la película.
+ *   - {number} rate: Calificación de la película.
+ *   - {string} image: URL de la imagen de la película.
+ */
+
+  
+  
 
 export function filterMovies({ users, movies, userId, fromDate, toDate, rate }) {
   const filteredMovies = [];
