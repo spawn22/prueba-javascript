@@ -1,4 +1,4 @@
-[
+export const movies =[
   {
     "userId": 10,
     "id": 1,
